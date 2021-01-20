@@ -29,99 +29,130 @@ $(document).ready(() => {
         $('.map').find('iframe').remove();
     });
 
-    function startSvetlana() {
-        $('.okno__left .svetlana_slider').slick({
-            dots: true,
-            slidesToShow: 1,
-            // arrows: false,
-            // autoplay: true,
-            // autoplaySpeed: 5000,
-            slidesToScroll: 1,
-        });
+    var svetlana = 0;
+    var internat = 0;
+    var perelet = 0;
 
+    function startSvetlana() {
+        if(svetlana == 0) {
+            console.log('work sv');
+            $('.okno__left .svetlana_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                // arrows: false,
+                // autoplay: true,
+                // autoplaySpeed: 5000,
+                slidesToScroll: 1,
+            });
+
+            if ($(window).width() > '767'){
+                $('.desktop__content .svetlana_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    prevArrow: '.svetlana_left',
+                    nextArrow: '.svetlana_right',
+                    slidesToScroll: 1,
+                });
+            } else {
+                $('.phone__content .svetlana_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    prevArrow: '.svetlana_left',
+                    nextArrow: '.svetlana_right',
+                    slidesToScroll: 1,
+                });
+            }
+        }
+        $('.okno__left .svetlana_slider').slick('refresh');
         if ($(window).width() > '767'){
-            $('.desktop__content .svetlana_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                prevArrow: '.svetlana_left',
-                nextArrow: '.svetlana_right',
-                slidesToScroll: 1,
-            });
+            $('.desktop__content .svetlana_slider').slick('refresh');
         } else {
-            $('.phone__content .svetlana_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                prevArrow: '.svetlana_left',
-                nextArrow: '.svetlana_right',
-                slidesToScroll: 1,
-            });
+            $('.phone__content .svetlana_slider').slick('refresh');
         }
    }
 
    function startinternat() {
-        $('.okno__left .internat_slider').slick({
-            dots: true,
-            slidesToShow: 1,
-            // arrows: false,
-            // autoplay: true,
-            // autoplaySpeed: 5000,
-            slidesToScroll: 1,
-        });
+        if(internat == 0) {
+            console.log('work in');
+            $('.okno__left .internat_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                // arrows: false,
+                // autoplay: true,
+                // autoplaySpeed: 5000,
+                slidesToScroll: 1,
+            });
 
+            if ($(window).width() > '767'){
+                $('.desktop__content .internat_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    prevArrow: '.internat_left',
+                    nextArrow: '.internat_right',
+                    slidesToScroll: 1,
+                });
+            } else {
+                $('.phone__content .internat_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    prevArrow: '.internat_left',
+                    nextArrow: '.internat_right',
+                    slidesToScroll: 1,
+                });
+            }
+        }
+        $('.okno__left .internat_slider').slick('refresh');
         if ($(window).width() > '767'){
-            $('.desktop__content .internat_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                prevArrow: '.internat_left',
-                nextArrow: '.internat_right',
-                slidesToScroll: 1,
-            });
+            $('.desktop__content .internat_slider').slick('refresh');
         } else {
-            $('.phone__content .internat_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                prevArrow: '.internat_left',
-                nextArrow: '.internat_right',
-                slidesToScroll: 1,
-            });
+            $('.phone__content .internat_slider').slick('refresh');
         }
     }
 
     function startPerelet() {
-        $('.okno__left .perelet_slider').slick({
-            dots: true,
-            slidesToShow: 1,
-            // arrows: false,
-            // autoplay: true,
-            // autoplaySpeed: 5000,
-            slidesToScroll: 1,
-        });
+        if(perelet == 0) {
+            console.log('work pere');
+            $('.okno__left .perelet_slider').slick({
+                dots: true,
+                slidesToShow: 1,
+                // arrows: false,
+                // autoplay: true,
+                // autoplaySpeed: 5000,
+                slidesToScroll: 1,
+            });
 
+            if ($(window).width() > '767'){
+                $('.desktop__content .perelet_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    prevArrow: '.perelet_left',
+                    nextArrow: '.perelet_right',
+                    slidesToScroll: 1,
+                });
+            } else {
+                $('.phone__content .perelet_slider').slick({
+                    infinite: true,
+                    dots: false,
+                    slidesToShow: 1,
+                    adaptiveHeight: true,
+                    prevArrow: '.perelet_left',
+                    nextArrow: '.perelet_right',
+                    slidesToScroll: 1,
+                });
+            }
+        }
+        $('.okno__left .perelet_slider').slick('refresh');
         if ($(window).width() > '767'){
-            $('.desktop__content .perelet_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                prevArrow: '.perelet_left',
-                nextArrow: '.perelet_right',
-                slidesToScroll: 1,
-            });
+            $('.desktop__content .perelet_slider').slick('refresh');
         } else {
-            $('.phone__content .perelet_slider').slick({
-                infinite: true,
-                dots: false,
-                slidesToShow: 1,
-                adaptiveHeight: true,
-                prevArrow: '.perelet_left',
-                nextArrow: '.perelet_right',
-                slidesToScroll: 1,
-            });
+            $('.phone__content .perelet_slider').slick('refresh');
         }
      }
     modalOpen.each(function () {
@@ -133,16 +164,19 @@ $(document).ready(() => {
             if(modalSrc) {
                 EachModal.append('<iframe src="' + modalSrc + '"></iframe>');
             }
+            if($(this).attr("data-modal") == "svetlana") {
+                startSvetlana();
+                svetlana = 1;
+            } else if ($(this).attr("data-modal") == "internat") {
+                startinternat();
+                internat = 1;
+            } else if ($(this).attr("data-modal") == "perelet") {
+                startPerelet();
+                perelet = 1;
+            }
             modal.fadeOut();
             overlay.fadeIn();
             EachModal.fadeIn();
-            if($(this).attr("data-modal") == "svetlana") {
-                startSvetlana();
-            } else if ($(this).attr("data-modal") == "internat") {
-                startinternat();
-            } else if ($(this).attr("data-modal") == "perelet") {
-                startPerelet();
-            }
         });
     });
 
