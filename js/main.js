@@ -2,6 +2,7 @@
 
 AOS.init({
     acnhorPlacement: 'top-bottom',
+    once: true,
     duration: 700
 });
 $(document).ready(() => {
@@ -180,6 +181,15 @@ $(document).ready(() => {
         });
     });
 
+    
+    if ($(window).width() > '767'){
+    } else {
+        $('.aparment__images').slick({
+            dots: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+        });
+    }
 
     // E-mail Ajax Send
     $("form").submit(function (event) {
@@ -235,31 +245,23 @@ $(document).ready(() => {
     // });
 
    $('.okno__left-slider').lightGallery({
-       thumbnail:true,
-       download: false,
-       selector: '.left-slider__item',
-   });
+    thumbnail:true,
+    download: false,
+    selector: '.left-slider__item',
+    mode: 'lg-fade'
+});
+
+
+$('.aparment__images').lightGallery({
+    thumbnail:true,
+    download: false,
+    selector: 'a',
+    mode: 'lg-fade'
+});
 
 
 
-    
-    // Вопрос ответ
-    // $('.faq__item').on('click', function() {
-    //   let faqSiblings = $(this).siblings();
-    //   faqSiblings.removeClass('active');
-    //   faqSiblings.find('.faq__item-answer').slideUp('300');
-    //   $(this).toggleClass('active');
-    //   $(this).find('.faq__item-answer').slideToggle('300');
-    // });
-
-    // Табы
-    // $('.gallery__navigation-button').on('click',  function() {
-    //     $(this).addClass('active').siblings().removeClass('active');
-    //     $('.gallery__box-item.active').hide();
-    //     $('.gallery__box-item').removeClass('active').eq($(this).index()).addClass('active');
-    //     $('.gallery__box-item').eq($(this).index()).css('display', 'flex').fadeIn();
-    // });
-
+  
 }); 
 
 
